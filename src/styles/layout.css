@@ -1,0 +1,97 @@
+@layer base {
+    .contenedor {
+        max-width: 72rem;
+        margin-inline: auto;
+        padding-inline: var(--espacio-3);
+    }
+    .cabecera {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--espacio-3);
+        padding-block: var(--espacio-4);
+    }
+    .cabecera nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--espacio-3);
+    }
+    .grid-noticias {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+        gap: var(--espacio-4);
+        padding-block: var(--espacio-5);
+    }
+}
+@layer componentes {
+    .cabecera {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        margin-bottom: var(--espacio-4);
+    }
+    .cabecera > p {
+        font-weight: 700;
+        margin: 0;
+    }
+    .cabecera ul {
+        display: flex;
+        gap: var(--espacio-4);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .cabecera a {
+        color: var(--color-acento);
+        text-underline-offset: 0.25rem;
+    }
+    .buscador {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--espacio-2);
+        max-width: 42rem;
+        margin-bottom: var(--espacio-5);
+    }
+    .buscador label {
+        flex-basis: 100%;
+        font-weight: 700;
+    }
+    .buscador input {
+        flex: 1;
+        min-width: 14rem;
+        padding: var(--espacio-3);
+        font: inherit;
+        color: var(--color-texto);
+        background: var(--color-superficie);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: var(--radio-card);
+    }
+    .buscador input::placeholder {
+        color: var(--color-texto-suave);
+    }
+    .buscador button[type="submit"] {
+        padding: var(--espacio-3) var(--espacio-4);
+        font: inherit;
+        font-weight: 700;
+        color: var(--color-fondo);
+        background: var(--color-acento);
+        border: none;
+        border-radius: var(--radio-card);
+        cursor: pointer;
+    }
+    .buscador button[type="button"] {
+        padding: var(--espacio-3);
+        font: inherit;
+        font-weight: 700;
+        color: var(--color-acento);
+        background: var(--color-superficie);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: var(--radio-card);
+        cursor: pointer;
+    }
+    footer {
+        margin-top: var(--espacio-5);
+        padding-block: var(--espacio-4);
+        color: var(--color-texto-suave);
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+}
